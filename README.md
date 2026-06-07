@@ -24,3 +24,14 @@ cd ecommerce-visual-search
 python3 -m venv venv
 source venv/bin/activate
 pip install torch torchvision faiss-cpu streamlit pandas pillow tqdm
+
+2. Prepare Data
+Create a folder named data/ in the root directory and place your product images (JPG/PNG) inside it.
+
+3. Build the Vector Index
+Extract embeddings for all images in your dataset and build the FAISS index:
+python build_index.py
+
+4. Launch the Web App
+Start the Streamlit interface:
+streamlit run app.py
